@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# brands Section
+--------------------------------------------------------------*/
+.brands .swiper {
+  padding: 10px 0;
+}
+
+.brands .swiper-wrapper {
+  height: auto;
+}
+
+.brands .swiper-slide img {
+  transition: 0.3s;
+}
+
+.brands .swiper-slide img:hover {
+  transform: scale(1.1);
+}
