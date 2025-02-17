@@ -30,7 +30,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/MACTECH/">
       <Routes>
         {/* Parent route with Layout */}
         <Route path="/" element={<Layout />}>
