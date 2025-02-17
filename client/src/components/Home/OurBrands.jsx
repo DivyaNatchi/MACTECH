@@ -20,13 +20,13 @@ import client11 from "../../assets/img/brands/topBrands/hoffman.png";
 import client12 from "../../assets/img/brands/topBrands/thermotex.png";
 import client13 from "../../assets/img/brands/topBrands/huebsch.png";
 import client14 from "../../assets/img/brands/topBrands/italclean.jpg";
-import client14 from "../../assets/img/brands/topBrands/maxi.png";
-import client15 from "../../assets/img/brands/topBrands/primus.png";
-import client16 from "../../assets/img/brands/topBrands/rema.png";
-import client17 from "../../assets/img/brands/topBrands/sankosha.png";
-import client18 from "../../assets/img/brands/topBrands/severnside-fabrics.png";
-import client19 from "../../assets/img/brands/topBrands/thermopatch.png";
-import client20 from "../../assets/img/brands/topBrands/unipress.png";
+import client15 from "../../assets/img/brands/topBrands/maxi.png";
+import client16 from "../../assets/img/brands/topBrands/primus.png";
+import client17 from "../../assets/img/brands/topBrands/rema.png";
+import client18 from "../../assets/img/brands/topBrands/sankosha.png";
+import client19 from "../../assets/img/brands/topBrands/severnside-fabrics.png";
+import client20 from "../../assets/img/brands/topBrands/thermopatch.png";
+import client21 from "../../assets/img/brands/topBrands/unipress.png";
 
 export default function OurBrands() {
   const brands = [
@@ -45,12 +45,12 @@ export default function OurBrands() {
     { img: client13, alt: "Huebsch" },
     { img: client14, alt: "Italclean" },
     { img: client15, alt: "Maxi" },
-    { img: client15, alt: "Primus" },
-    { img: client16, alt: "Rema" },
-    { img: client17, alt: "Sankosha" },
-    { img: client18, alt: "Severnside-fabrics" },
-    { img: client19, alt: "Thermopatch" },
-    { img: client20, alt: "unipress" },
+    { img: client16, alt: "Primus" },
+    { img: client17, alt: "Rema" },
+    { img: client18, alt: "Sankosha" },
+    { img: client19, alt: "Severnside-fabrics" },
+    { img: client20, alt: "Thermopatch" },
+    { img: client21, alt: "unipress" },
   ];
 
   return (
