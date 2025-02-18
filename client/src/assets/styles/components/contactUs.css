@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px 0 30px 0;
+}
+
+.contact .info-item i {
+  font-size: 20px;
+  color: var(--accent-color);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.contact .info-item h3 {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.contact .email-form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 30px 30px 0 30px;
+}
+
+@media (max-width: 575px) {
+  .contact .email-form {
+    padding: 20px;
+  }
+}
+
+.contact .email-form input[type="text"],
+.contact .email-form input[type="email"],
+.contact .email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .email-form input[type="text"]:focus,
+.contact .email-form input[type="email"]:focus,
+.contact .email-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contact .email-form input[type="text"]::placeholder,
+.contact .email-form input[type="email"]::placeholder,
+.contact .email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.contact .email-form button[type="submit"] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .email-form button[type="submit"]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.contact .alert {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact .alert-success {
+  color: #155724;
+  background: none;
+  font-weight: 700;
+  border: none;
+}
+
+.contact .alert-danger {
+  color: #721c24;
+  background: none;
+  font-weight: 700;
+  border: none;
+}
+
+/*Captcha css*/
+
+.captch_box {
+  position: relative;
+  height: 45px;
+  width: 100%;
+}
+.refresh_button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: color-mix(in srgb, var(--accent-color), transparent 20%) !important;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem; /* Increase the icon size */
+  font-weight: 900; /* Make the icon bold */
+}
+.refresh_button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+.captch_box input,
+.button button {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+.captch_box input {
+  padding: 0 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); */
+  color: color-mix(in srgb, var(--accent-color), transparent 20%) !important;
+  text-shadow: 2px 2px 4px
+    color-mix(in srgb, var(--accent-color), transparent 20%);
+}

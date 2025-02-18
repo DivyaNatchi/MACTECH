@@ -30,7 +30,7 @@
 
 /* Global Header on Scroll
 ------------------------------*/
-.scrolled .header {
+.header {
   --background-color: #1e4356;
 }
 
@@ -84,7 +84,7 @@
   .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--nav-hover-color) !important;
   }
 
   .navmenu .dropdown ul {

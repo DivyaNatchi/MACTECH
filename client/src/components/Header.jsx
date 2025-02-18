@@ -5,13 +5,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   Dropdown,
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "../assets/styles/components/header.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import logo from "../assets/img/MAC/MAC_Logo.jpg";
@@ -81,7 +80,7 @@ export default function Header() {
   };
 
   return (
-    <header id="header" className="header d-flex align-items-center fixed-top">
+    <header id="header" className="header d-flex align-items-center">
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <NavbarBrand href="#" className="logo d-flex align-items-center">
           {/* Uncomment the line below if you also wish to use an image logo */}
@@ -97,7 +96,12 @@ export default function Header() {
           <Collapse isOpen={isOpen} navbar>
             <Nav navbar className="me-auto">
               <NavItem>
-                <NavLink tag={Link} to="/">
+                <NavLink
+                  tag={Link}
+                  to="/"
+                  className="nav-link"
+                  activeClassName="active"
+                >
                   Home
                 </NavLink>
               </NavItem>
@@ -110,17 +114,36 @@ export default function Header() {
                 onMouseEnter={() => handleMouseEnter("equipments")}
                 onMouseLeave={() => handleMouseLeave("equipments")}
               >
-                <DropdownToggle nav caret tag={Link} to="/equipments/option1">
+                <DropdownToggle
+                  nav
+                  caret
+                  tag={NavLink}
+                  to="/equipments/option1"
+                  className={({ isActive }) =>
+                    isActive ||
+                    window.location.pathname.startsWith("/equipments")
+                      ? "active"
+                      : ""
+                  }
+                >
                   Equipments
                 </DropdownToggle>
                 <DropdownMenu
                   end
                   className={equipmentsDropdownOpen ? "show" : ""}
                 >
-                  <DropdownItem tag={Link} to="/equipments/option1">
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/equipments/option1"
+                    className="active"
+                  >
                     Option 1
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/equipments/option2">
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/equipments/option2"
+                    className="active"
+                  >
                     Option 2
                   </DropdownItem>
                 </DropdownMenu>
@@ -144,17 +167,36 @@ export default function Header() {
                 onMouseEnter={() => handleMouseEnter("accessories")}
                 onMouseLeave={() => handleMouseLeave("accessories")}
               >
-                <DropdownToggle nav caret tag={Link} to="/accessories/option1">
+                <DropdownToggle
+                  nav
+                  caret
+                  tag={NavLink}
+                  to="/accessories/option1"
+                  className={({ isActive }) =>
+                    isActive ||
+                    window.location.pathname.startsWith("/accessories")
+                      ? "active"
+                      : ""
+                  }
+                >
                   Accessories
                 </DropdownToggle>
                 <DropdownMenu
                   end
                   className={accessoriesDropdownOpen ? "show" : ""}
                 >
-                  <DropdownItem tag={Link} to="/accessories/option1">
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/accessories/option1"
+                    activeClassName="active"
+                  >
                     Option 1
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/accessories/option2">
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/accessories/option2"
+                    activeClassName="active"
+                  >
                     Option 2
                   </DropdownItem>
                 </DropdownMenu>

@@ -56,7 +56,7 @@ export default function OurBrands() {
   return (
     <section id="brands" className="brands section light-background">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Our Top Brands</h2>
+        <h2>Our Brands</h2>
       </div>
       <div className="container">
         <Swiper
