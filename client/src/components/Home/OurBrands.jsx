@@ -6,51 +6,51 @@ import "swiper/swiper-bundle.css";
 import "../../assets/styles/components/home/ourBrands.css";
 
 // Import your brands images
-import client1 from "../../assets/img/brands/topBrands/ADC.png";
-import client2 from "../../assets/img/brands/topBrands/BMM.png";
-import client3 from "../../assets/img/brands/topBrands/CCS.png";
-import client4 from "../../assets/img/brands/topBrands/chicago.png";
-import client5 from "../../assets/img/brands/topBrands/comel.png";
-import client6 from "../../assets/img/brands/topBrands/electrolux.png";
-import client7 from "../../assets/img/brands/topBrands/energenics.png";
-import client8 from "../../assets/img/brands/topBrands/fogor.png";
-import client9 from "../../assets/img/brands/topBrands/forenta.jpg";
-import client10 from "../../assets/img/brands/topBrands/tolon.png";
-import client11 from "../../assets/img/brands/topBrands/hoffman.png";
-import client12 from "../../assets/img/brands/topBrands/thermotex.png";
-import client13 from "../../assets/img/brands/topBrands/huebsch.png";
-import client14 from "../../assets/img/brands/topBrands/italclean.jpg";
-import client15 from "../../assets/img/brands/topBrands/maxi.png";
-import client16 from "../../assets/img/brands/topBrands/primus.png";
-import client17 from "../../assets/img/brands/topBrands/rema.png";
-import client18 from "../../assets/img/brands/topBrands/sankosha.png";
-import client19 from "../../assets/img/brands/topBrands/severnside-fabrics.png";
-import client20 from "../../assets/img/brands/topBrands/thermopatch.png";
-import client21 from "../../assets/img/brands/topBrands/unipress.png";
+import brand1 from "../../assets/img/brands/topBrands/ADC.png";
+import brand2 from "../../assets/img/brands/topBrands/BMM.png";
+import brand3 from "../../assets/img/brands/topBrands/CCS.png";
+import brand4 from "../../assets/img/brands/topBrands/chicago.png";
+import brand5 from "../../assets/img/brands/topBrands/comel.png";
+import brand6 from "../../assets/img/brands/topBrands/electrolux.png";
+import brand7 from "../../assets/img/brands/topBrands/energenics.png";
+import brand8 from "../../assets/img/brands/topBrands/fogor.png";
+import brand9 from "../../assets/img/brands/topBrands/forenta.jpg";
+import brand10 from "../../assets/img/brands/topBrands/tolon.png";
+import brand11 from "../../assets/img/brands/topBrands/hoffman.png";
+import brand12 from "../../assets/img/brands/topBrands/thermotex.png";
+import brand13 from "../../assets/img/brands/topBrands/huebsch.png";
+import brand14 from "../../assets/img/brands/topBrands/italclean.jpg";
+import brand15 from "../../assets/img/brands/topBrands/maxi.png";
+import brand16 from "../../assets/img/brands/topBrands/primus.png";
+import brand17 from "../../assets/img/brands/topBrands/rema.png";
+import brand18 from "../../assets/img/brands/topBrands/sankosha.png";
+import brand19 from "../../assets/img/brands/topBrands/severnside-fabrics.png";
+import brand20 from "../../assets/img/brands/topBrands/thermopatch.png";
+import brand21 from "../../assets/img/brands/topBrands/unipress.png";
 
 export default function OurBrands() {
   const brands = [
-    { img: client1, alt: "ADC" },
-    { img: client2, alt: "BMM" },
-    { img: client3, alt: "CCS" },
-    { img: client4, alt: "Chicago" },
-    { img: client5, alt: "Comel" },
-    { img: client6, alt: "Electrolux" },
-    { img: client7, alt: "Energenics" },
-    { img: client8, alt: "Fogor" },
-    { img: client9, alt: "Forenta" },
-    { img: client10, alt: "Tolon" },
-    { img: client11, alt: "Hoffman" },
-    { img: client12, alt: "Thermotex" },
-    { img: client13, alt: "Huebsch" },
-    { img: client14, alt: "Italclean" },
-    { img: client15, alt: "Maxi" },
-    { img: client16, alt: "Primus" },
-    { img: client17, alt: "Rema" },
-    { img: client18, alt: "Sankosha" },
-    { img: client19, alt: "Severnside-fabrics" },
-    { img: client20, alt: "Thermopatch" },
-    { img: client21, alt: "unipress" },
+    { img: brand1, alt: "ADC" },
+    { img: brand2, alt: "BMM" },
+    { img: brand3, alt: "CCS" },
+    { img: brand4, alt: "Chicago" },
+    { img: brand5, alt: "Comel" },
+    { img: brand6, alt: "Electrolux" },
+    { img: brand7, alt: "Energenics" },
+    { img: brand8, alt: "Fogor" },
+    { img: brand9, alt: "Forenta" },
+    { img: brand10, alt: "Tolon" },
+    { img: brand11, alt: "Hoffman" },
+    { img: brand12, alt: "Thermotex" },
+    { img: brand13, alt: "Huebsch" },
+    { img: brand14, alt: "Italclean" },
+    { img: brand15, alt: "Maxi" },
+    { img: brand16, alt: "Primus" },
+    { img: brand17, alt: "Rema" },
+    { img: brand18, alt: "Sankosha" },
+    { img: brand19, alt: "Severnside-fabrics" },
+    { img: brand20, alt: "Thermopatch" },
+    { img: brand21, alt: "unipress" },
   ];
 
   return (
@@ -73,9 +73,9 @@ export default function OurBrands() {
           }}
           className="swiper-wrapper align-items-center"
         >
-          {brands.map((client, index) => (
+          {brands.map((brand, index) => (
             <SwiperSlide key={index} className="swiper-slide">
-              <img src={client.img} className="img-fluid" alt={client.alt} />
+              <img src={brand.img} className="img-fluid" alt={brand.alt} />
             </SwiperSlide>
           ))}
         </Swiper>

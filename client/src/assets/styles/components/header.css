@@ -237,9 +237,15 @@
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown > .dropdown-active {
+  .navmenu .dropdown .dropdown-active {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+    background-color: rgba(33, 37, 41, 0.03) !important;
+  }
+
+  /* Override the background color for active dropdown items */
+  .dropdown-menu .dropdown-item.active,
+  .dropdown-menu .dropdown-item:active {
+    background-color: rgba(33, 37, 41, 0.03) !important;
   }
 
   .mobile-nav-active {

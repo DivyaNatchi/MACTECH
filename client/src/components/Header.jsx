@@ -11,8 +11,8 @@ import {
   Dropdown,
 } from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
-import "../assets/styles/components/header.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "../assets/styles/components/header.css";
 import logo from "../assets/img/MAC/MAC_Logo.jpg";
 
 export default function Header() {
@@ -100,7 +100,7 @@ export default function Header() {
                   tag={Link}
                   to="/"
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Home
                 </NavLink>
@@ -119,8 +119,7 @@ export default function Header() {
                   caret
                   tag={NavLink}
                   to="/equipments/option1"
-                  className={({ isActive }) =>
-                    isActive ||
+                  className={
                     window.location.pathname.startsWith("/equipments")
                       ? "active"
                       : ""
@@ -135,14 +134,14 @@ export default function Header() {
                   <DropdownItem
                     tag={NavLink}
                     to="/equipments/option1"
-                    className="active"
+                    className="dropdown-active"
                   >
                     Option 1
                   </DropdownItem>
                   <DropdownItem
                     tag={NavLink}
                     to="/equipments/option2"
-                    className="active"
+                    className="dropdown-active"
                   >
                     Option 2
                   </DropdownItem>
@@ -172,8 +171,7 @@ export default function Header() {
                   caret
                   tag={NavLink}
                   to="/accessories/option1"
-                  className={({ isActive }) =>
-                    isActive ||
+                  className={
                     window.location.pathname.startsWith("/accessories")
                       ? "active"
                       : ""
@@ -188,19 +186,29 @@ export default function Header() {
                   <DropdownItem
                     tag={NavLink}
                     to="/accessories/option1"
-                    activeClassName="active"
+                    activeclassname="dropdown-active"
                   >
                     Option 1
                   </DropdownItem>
                   <DropdownItem
                     tag={NavLink}
                     to="/accessories/option2"
-                    activeClassName="active"
+                    activeclassname="dropdown-active"
                   >
                     Option 2
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
+              <NavItem>
+                <Link
+                  href="/Mactech_brochure.pdf"
+                  target="_blank"
+                  download="Mactech_brochure.pdf"
+                  title="Download Our Brochure"
+                >
+                  Brochure
+                </Link>
+              </NavItem>
               {/* <NavItem>
                 <NavLink tag={Link} to="/projects">
                   Projects

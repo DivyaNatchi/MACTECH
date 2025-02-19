@@ -162,6 +162,9 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="contact section">
+      <div className="container section-title" data-aos="fade-up">
+        <h2>Contact US</h2>
+      </div>
       <Container className="container" data-aos="fade-up" data-aos-delay="100">
         <Row className="row gy-4">
           {/* Contact Information */}
@@ -188,7 +191,9 @@ export default function ContactSection() {
                 >
                   <i className="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+974 5583 8364</p>
+                  <a href="tel:+97455838364">
+                    <p>+974 5583 8364</p>
+                  </a>
                 </div>
               </Col>
 
@@ -200,7 +205,9 @@ export default function ContactSection() {
                 >
                   <i className="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@mactechqatar.com</p>
+                  <a href="mailto:info@mactechqatar.com" target="_blank">
+                    <p>info@mactechqatar.com</p>
+                  </a>
                 </div>
               </Col>
             </Row>

@@ -27,6 +27,14 @@
   margin: 10px 0;
 }
 
+.contact .info-item a {
+  color: var(--accent-color) !important;
+}
+
+.contact .info-item a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%) !important;
+}
+
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
