@@ -96,7 +96,7 @@ export default function Footer() {
           <span>All Rights Reserved</span>
         </p>
         <div className="credits">
-          Designed by
+          Designed by{" "}
           <a href="https://www.bytesizeitsolutions.com/">
             Byte Size IT Solutions
           </a>

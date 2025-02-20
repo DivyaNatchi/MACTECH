@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+# Blog Posts Section
+--------------------------------------------------------------*/
+.spare-parts input[type="text"]:focus {
+  border-color: var(--accent-color);
+}
+
+.spare-parts input[type="text"]::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.spare-parts .no-match {
+  color: var(--nav-hover-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.spare-parts .card {
+  max-width: 10rem;
+}
+
+.spare-parts .card hr {
+  margin: 0;
+}
+.spare-parts .card .card-title {
+  margin-bottom: 0;
+}
+
+.spare-parts .card .card-body {
+  height: 4rem;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spare-parts .card-title p {
+  color: var(--heading-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.spare-parts input[type="text"] {
+  font-size: 14px;
+  padding: 10px 15px;
+  max-width: 20rem;
+  margin: auto;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.spare-parts .swiper-wrapper {
+  margin-bottom: 1.5rem;
+  /* padding-left: 8rem; */
+}
+
+.spare-parts .swiper-button-prev,
+.spare-parts .swiper-button-next {
+  color: var(--accent-color);
+}
+
+.spare-parts .swiper-button-prev:hover .spare-parts .swiper-button-next:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+.spare-parts .swiper-scrollbar-drag {
+  background-color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+  .col-md-2 {
+    width: 10rem;
+  }
+}

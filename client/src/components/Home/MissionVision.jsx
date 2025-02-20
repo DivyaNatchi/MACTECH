@@ -6,7 +6,7 @@ import image2 from "../../assets/img/features-2.svg";
 
 export default function MissionVision() {
   return (
-    <section id="features" className="features section">
+    <section id="features" className="features section light-background">
       <div className="container">
         <div className="container section-title" data-aos="fade-up">
           <h2>Shaping the Future of Laundry Services</h2>

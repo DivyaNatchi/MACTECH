@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/swiper-bundle.css";
+import "swiper/css";
 
 import "../../assets/styles/components/home/ourBrands.css";
 
@@ -54,7 +54,7 @@ export default function OurBrands() {
   ];
 
   return (
-    <section id="brands" className="brands section light-background">
+    <section id="brands" className="brands section">
       <div className="container section-title" data-aos="fade-up">
         <h2>Our Brands</h2>
       </div>
