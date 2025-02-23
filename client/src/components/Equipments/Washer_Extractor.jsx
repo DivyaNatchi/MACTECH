@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Row, Col, Card, CardImg, CardBody, CardTitle } from "reactstrap";
+import React from "react";
+import { Row, Col } from "reactstrap";
 
 const images = import.meta.glob(
   "../../assets/img/equipments/**/*.{jpg,png,jpeg}",
@@ -16,42 +16,36 @@ export default function Washer_Extractor() {
   });
 
   return (
-    <div>
-      <h2>Washer Extractor</h2>
-      <p>This is the content for Option 1 in Equipments.</p>
-
-      <Row>
-        {imageList.map((part, index) => (
-          <Col
-            lg="6"
-            md="4"
-            sm="6"
-            xs="12"
-            key={index}
-            className="mb-4"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
-            <Card className="service-item position-relative">
-              <div className="img">
-                <CardImg
-                  top
-                  width="100%"
-                  src={part.img}
-                  alt={`Image of ${part.title}`}
-                />
+    <>
+      <div className="mb-4">
+        <h2>Washer Extractor</h2>
+      </div>
+      <div className="equipment-content-area">
+        <Row className="g-3">
+          {/* g-3 adds Bootstrap grid spacing */}
+          {imageList.map((part, index) => (
+            <Col lg="6" md="6" sm="12" key={index} className="equipment-col">
+              <div className="washer-extractor-item position-relative">
+                <div className="img">
+                  <img
+                    className="img-fluid"
+                    src={part.img}
+                    alt={`Image of ${part.title}`}
+                  />
+                </div>
+                <div className="details">
+                  <a href="#" className="stretched-link">
+                    <h3>{part.title}</h3>
+                  </a>
+                  <p>
+                    Ut autem aut autem non a. Sint sint sit facilis nam iusto
+                  </p>
+                </div>
               </div>
-              <CardBody>
-                <a href="service-details.html" className="stretched-link">
-                  <CardTitle tag="h2">
-                    <p className="title">{part.title}</p>
-                  </CardTitle>
-                </a>
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </div>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </>
   );
 }

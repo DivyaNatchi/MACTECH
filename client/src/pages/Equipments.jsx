@@ -35,7 +35,7 @@ export default function Equipments() {
       <Container>
         <Row>
           {/* Sidebar for Submenu */}
-          <Col md="4" className="equipment-box">
+          <Col md="3" className="equipment-box">
             <h4>Equipment List</h4>
             <ul>
               {/* Option 1 */}
@@ -143,7 +143,7 @@ export default function Equipments() {
           </Col>
 
           {/* Main Content Area */}
-          <Col md="8" className="content-area">
+          <Col md="9" className="equipment-content-area">
             <Outlet />
           </Col>
         </Row>
