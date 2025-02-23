@@ -1,12 +1,10 @@
 import React from "react";
 
-const Option2 = () => {
+export default function Dumble_Dryer() {
   return (
     <div>
-      <h2>Option 2</h2>
+      <h2>Duble Dryer</h2>
       <p>This is the content for Option 2 in Equipments.</p>
     </div>
   );
-};
-
-export default Option2;
+}

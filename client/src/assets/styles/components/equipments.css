@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+
+.equipments-section .equipment-box {
+  background-color: var(--surface-color);
+  padding: 20px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.equipments-section .equipment-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.equipments-section .equipment-box ul {
+  padding-left: 0;
+}
+.equipments-section .equipment-box li {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-top: 15px;
+  transition: 0.3s;
+  justify-content: space-between;
+}
+
+.equipment-box ul li.active-link {
+  background-color: var(--accent-color);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+.equipment-box ul li:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  color: var(--accent-color);
+}

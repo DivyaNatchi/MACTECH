@@ -6,8 +6,8 @@ import useToggleScrolled from "./hooks/useToggleScrolled";
 // Import the page components
 import Home from "./pages/Home";
 import Equipments from "./pages/Equipments";
-import Option1 from "./pages/Equipments/Option1";
-import Option2 from "./pages/Equipments/Option2";
+import Washer_Extractor from "./components/Equipments/Washer_Extractor";
+import Dumble_Dryer from "./components/Equipments/Dumble_Dryer";
 import Services from "./pages/Services";
 import SpareParts from "./pages/SpareParts";
 import Accessories from "./pages/Accessories";
@@ -35,17 +35,17 @@ const App = () => {
         {/* Parent route with Layout */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="equipments/*" element={<Equipments />}>
+          <Route path="equipments" element={<Equipments />}>
             {/* Submenu routes for Equipments */}
-            <Route path="option1" element={<Option1 />} />
-            <Route path="option2" element={<Option2 />} />
+            <Route path="washer_extractor" element={<Washer_Extractor />} />
+            <Route path="dumble_dryer" element={<Dumble_Dryer />} />
           </Route>
           <Route path="services" element={<Services />} />
           <Route path="spareparts" element={<SpareParts />} />
-          <Route path="accessories/*" element={<Accessories />}>
+          <Route path="accessories/" element={<Accessories />}>
             {/* Submenu routes for Equipments */}
-            <Route path="option1" element={<Option1 />} />
-            <Route path="option2" element={<Option2 />} />
+            {/* <Route path="option1" element={<Option1 />} />
+            <Route path="option2" element={<Option2 />} /> */}
           </Route>
           {/* <Route path="projects" element={<Projects />} /> */}
           <Route path="contactus" element={<ContactUs />} />

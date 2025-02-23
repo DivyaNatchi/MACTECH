@@ -118,6 +118,10 @@
     font-size: 12px;
   }
 
+  .navmenu .dropdown .dropdown-menu .dropdown-active {
+    background-color: #fff !important;
+  }
+
   .navmenu .dropdown .dropdown-menu .dropdown-item:hover {
     color: var(--nav-dropdown-hover-color);
   }
@@ -243,8 +247,8 @@
   }
 
   /* Override the background color for active dropdown items */
-  .dropdown-menu .dropdown-item.active,
-  .dropdown-menu .dropdown-item:active {
+  .navmenu .dropdown-item.active,
+  .navmenu .dropdown-item:active {
     background-color: rgba(33, 37, 41, 0.03) !important;
   }
 

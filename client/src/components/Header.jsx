@@ -118,7 +118,7 @@ export default function Header() {
                   nav
                   caret
                   tag={NavLink}
-                  to="/equipments/option1"
+                  to="/equipments/washer_extractor"
                   className={
                     window.location.pathname.startsWith("/equipments")
                       ? "active"
@@ -133,14 +133,14 @@ export default function Header() {
                 >
                   <DropdownItem
                     tag={NavLink}
-                    to="/equipments/option1"
+                    to="/equipments/washer_extractor"
                     className="dropdown-active"
                   >
                     Option 1
                   </DropdownItem>
                   <DropdownItem
                     tag={NavLink}
-                    to="/equipments/option2"
+                    to="/equipments/dumble_dryer"
                     className="dropdown-active"
                   >
                     Option 2
