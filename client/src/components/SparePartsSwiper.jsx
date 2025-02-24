@@ -41,7 +41,7 @@ export default function SparePartsSwiper({ spareParts }) {
         >
           {groupedSpareParts.map((group, groupIndex) => (
             <SwiperSlide key={groupIndex}>
-              <Container d-flex justify-content-center align-items-center>
+              <Container className="d-flex justify-content-center align-items-center">
                 <Row className="justify-content-center">
                   {group.slice(0, 6).map((part, index) => (
                     <Col key={index} md="2" sm="4" xs="6" className="mb-3">

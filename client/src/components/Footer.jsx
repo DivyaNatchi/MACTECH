@@ -95,7 +95,7 @@ export default function Footer() {
           <strong className="px-1 sitename">MACTECH Trading</strong>
           <span>All Rights Reserved</span>
         </p>
-        <div className="credits">
+        <div className="credits pb-3">
           Designed by{" "}
           <a href="https://www.bytesizeitsolutions.com/">
             Byte Size IT Solutions

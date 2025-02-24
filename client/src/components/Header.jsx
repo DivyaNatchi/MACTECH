@@ -136,14 +136,42 @@ export default function Header() {
                     to="/equipments/washer_extractor"
                     className="dropdown-active"
                   >
-                    Option 1
+                    Washer Extractors
                   </DropdownItem>
                   <DropdownItem
                     tag={NavLink}
                     to="/equipments/dumble_dryer"
                     className="dropdown-active"
                   >
-                    Option 2
+                    Dumble Dryer
+                  </DropdownItem>
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/equipments/dry_cleaning_machines"
+                    className="dropdown-active"
+                  >
+                    Dry Cleaning Machines
+                  </DropdownItem>
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/equipments/flate_ironing"
+                    className="dropdown-active"
+                  >
+                    Flate Ironing
+                  </DropdownItem>
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/equipments/garment_finishing"
+                    className="dropdown-active"
+                  >
+                    Garment Finishing
+                  </DropdownItem>
+                  <DropdownItem
+                    tag={NavLink}
+                    to="/equipments/packing_machines"
+                    className="dropdown-active"
+                  >
+                    Packing Machines
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>

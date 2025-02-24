@@ -149,7 +149,7 @@
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    /* color: var(--nav-color); */
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;

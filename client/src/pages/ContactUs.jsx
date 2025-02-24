@@ -163,7 +163,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="contact section">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Contact US</h2>
+        <h2>Contact Us</h2>
       </div>
       <Container className="container" data-aos="fade-up" data-aos-delay="100">
         <Row className="row gy-4">

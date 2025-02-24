@@ -8,11 +8,11 @@ export default function Equipments() {
   const location = useLocation();
 
   // State to manage the visibility of submenus
-  const [isWasherExtractor, setIsWasherExtractor] = useState(false);
+  // const [isWasherExtractor, setIsWasherExtractor] = useState(false);
   const [isDumbleDryer, setIsDumbleDryer] = useState(false);
 
   // Toggles
-  const toggleOption1 = () => setIsWasherExtractor(!isWasherExtractor);
+  // const toggleOption1 = () => setIsWasherExtractor(!isWasherExtractor);
   const toggleOption2 = () => setIsDumbleDryer(!isDumbleDryer);
 
   // Check active links for styling
@@ -35,7 +35,7 @@ export default function Equipments() {
       <Container>
         <Row>
           {/* Sidebar for Submenu */}
-          <Col md="3" className="equipment-box">
+          <Col md="3" className="equipment-box mb-4">
             <h4>Equipment List</h4>
             <ul>
               {/* Option 1 */}
@@ -43,7 +43,7 @@ export default function Equipments() {
                 className={`${
                   isSubMenuActive("washer_extractor") ? "active-link" : ""
                 }`}
-                onClick={toggleOption1}
+                // onClick={toggleOption1}
               >
                 <Link
                   to="washer_extractor"
@@ -51,50 +51,55 @@ export default function Equipments() {
                     isActive("/washer_extractor") ? "active" : ""
                   }`}
                 >
-                  Washer Extractors
+                  <span>Washer Extractors</span>
+                  <i
+                    className="bi-arrow-right-circle"
+                    style={{ marginLeft: "10px" }}
+                  ></i>
                 </Link>
 
-                <i
+                {/* <i
                   className={`bi ${
                     isWasherExtractor
                       ? "bi-arrow-down-circle"
                       : "bi-arrow-right-circle"
                   }`}
                   style={{ marginLeft: "10px" }}
-                ></i>
+                ></i> */}
               </li>
               {/* Submenu for Option 1 */}
-              <Collapse isOpen={isWasherExtractor}>
+              {/* <Collapse isOpen={isWasherExtractor}>
                 <ul className="sub-menu ms-3">
                   <li>
                     <Link
-                      to="washer_extractor/submenu1"
+                      to="washer_extractor?brand=kannegiesser"
                       className={`nav-link ${
-                        isActive("/option1/submenu1") ? "active" : ""
+                        isActive("/washer_extractor/kannegiesser")
+                          ? "active"
+                          : ""
                       }`}
                     >
-                      Submenu 1
+                      Kannegiesser
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="washer_extractor/submenu2"
+                      to="washer_extractor?brand=natronic"
                       className={`nav-link ${
-                        isActive("/option1/submenu2") ? "active" : ""
+                        isActive("/washer_extractor/natronic") ? "active" : ""
                       }`}
                     >
-                      Submenu 2
+                      Natronic
                     </Link>
                   </li>
                 </ul>
-              </Collapse>
+              </Collapse> */}
 
               {/* Option 2 */}
               <li
                 className={`${
                   isSubMenuActive("dumble_dryer") ? "active-link" : ""
                 } mt-3`}
-                onClick={toggleOption2}
               >
                 <Link
                   to="dumble_dryer"
@@ -102,43 +107,90 @@ export default function Equipments() {
                     isActive("/dumble_dryer") ? "active" : ""
                   }`}
                 >
-                  Dumble Dryer
-                </Link>
+                  <span>Dumble Dryer</span>
 
-                <i
-                  className={`bi ${
-                    isDumbleDryer
-                      ? "bi-arrow-down-circle"
-                      : "bi-arrow-right-circle"
-                  }`}
-                  style={{ marginLeft: "10px" }}
-                ></i>
+                  <i
+                    className="bi-arrow-right-circle"
+                    style={{ marginLeft: "10px" }}
+                  ></i>
+                </Link>
               </li>
-              {/* Submenu for Option 2 */}
-              <Collapse isOpen={isDumbleDryer}>
-                <ul className="sub-menu ms-3">
-                  <li>
-                    <Link
-                      to="dumble_dryer/submenu1"
-                      className={`nav-link ${
-                        isActive("/dumble_dryer/submenu1") ? "active" : ""
-                      }`}
-                    >
-                      Submenu 1
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="dumble_dryer/submenu2"
-                      className={`nav-link ${
-                        isActive("/dumble_dryer/submenu2") ? "active" : ""
-                      }`}
-                    >
-                      Submenu 2
-                    </Link>
-                  </li>
-                </ul>
-              </Collapse>
+              <li
+                className={`${
+                  isSubMenuActive("dry_cleaning_machines") ? "active-link" : ""
+                } mt-3`}
+              >
+                <Link
+                  to="dry_cleaning_machines"
+                  className={`nav-link ${
+                    isActive("/dry_cleaning_machines") ? "active" : ""
+                  }`}
+                >
+                  <span>Dry Cleaning Machines</span>
+
+                  <i
+                    className="bi-arrow-right-circle"
+                    style={{ marginLeft: "10px" }}
+                  ></i>
+                </Link>
+              </li>
+              <li
+                className={`${
+                  isSubMenuActive("flate_ironing") ? "active-link" : ""
+                } mt-3`}
+              >
+                <Link
+                  to="flate_ironing"
+                  className={`nav-link ${
+                    isActive("/flate_ironing") ? "active" : ""
+                  }`}
+                >
+                  <span>Flate Ironing</span>
+
+                  <i
+                    className="bi-arrow-right-circle"
+                    style={{ marginLeft: "10px" }}
+                  ></i>
+                </Link>
+              </li>
+              <li
+                className={`${
+                  isSubMenuActive("garment_finishing") ? "active-link" : ""
+                } mt-3`}
+              >
+                <Link
+                  to="garment_finishing"
+                  className={`nav-link ${
+                    isActive("/garment_finishing") ? "active" : ""
+                  }`}
+                >
+                  <span>Garment Finishing</span>
+
+                  <i
+                    className="bi-arrow-right-circle"
+                    style={{ marginLeft: "10px" }}
+                  ></i>
+                </Link>
+              </li>
+              <li
+                className={`${
+                  isSubMenuActive("packing_machines") ? "active-link" : ""
+                } mt-3`}
+              >
+                <Link
+                  to="packing_machines"
+                  className={`nav-link ${
+                    isActive("/packing_machines") ? "active" : ""
+                  }`}
+                >
+                  <span>Packing Machines</span>
+
+                  <i
+                    className="bi-arrow-right-circle"
+                    style={{ marginLeft: "10px" }}
+                  ></i>
+                </Link>
+              </li>
             </ul>
           </Col>
 
