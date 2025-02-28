@@ -8,7 +8,7 @@ export default function Footer() {
     <footer id="footer" className="footer dark-background">
       {/* Footer Top Section */}
       <Container className="footer-top">
-        <Row className="gy-4">
+        <Row className="gy-3">
           {/* Footer About Section */}
           <Col lg="4" md="6" className="footer-about">
             <a href="#" className="d-flex align-items-center sitename">
@@ -28,7 +28,7 @@ export default function Footer() {
           </Col>
 
           {/* Useful Links Section */}
-          <Col lg="2" md="3" className="footer-links">
+          <Col lg="4" md="3" className="footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li>

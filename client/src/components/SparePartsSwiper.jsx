@@ -23,6 +23,23 @@ const groupSpareParts = (parts, groupSize) => {
   return groupedParts;
 };
 
+// Helper function to render spare parts
+const renderSpareParts = (parts) => {
+  return parts.map((part, index) => (
+    <Col key={index} md="2" sm="4" xs="6" className="mb-3">
+      <Card>
+        <CardImg top width="100%" src={part.img} alt="Spare part image" />
+        <hr />
+        <CardBody>
+          <CardTitle tag="h2">
+            <p className="title">{part.title}</p>
+          </CardTitle>
+        </CardBody>
+      </Card>
+    </Col>
+  ));
+};
+
 export default function SparePartsSwiper({ spareParts }) {
   const groupedSpareParts = groupSpareParts(spareParts, 12);
 
@@ -43,45 +60,10 @@ export default function SparePartsSwiper({ spareParts }) {
             <SwiperSlide key={groupIndex}>
               <Container className="d-flex justify-content-center align-items-center">
                 <Row className="justify-content-center">
-                  {group.slice(0, 6).map((part, index) => (
-                    <Col key={index} md="2" sm="4" xs="6" className="mb-3">
-                      <Card>
-                        <CardImg
-                          top
-                          width="100%"
-                          src={part.img}
-                          alt="Spare part image"
-                        />
-                        <hr />
-                        <CardBody>
-                          <CardTitle tag="h2">
-                            <p className="title">{part.title}</p>
-                          </CardTitle>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  ))}
+                  {renderSpareParts(group.slice(0, 6))}
                 </Row>
-
                 <Row className="justify-content-center">
-                  {group.slice(6, 12).map((part, index) => (
-                    <Col key={index} md="2" sm="4" xs="6" className="mb-3">
-                      <Card>
-                        <CardImg
-                          top
-                          width="100%"
-                          src={part.img}
-                          alt="Spare part image"
-                        />
-                        <hr />
-                        <CardBody>
-                          <CardTitle tag="h2">
-                            <p className="title">{part.title}</p>
-                          </CardTitle>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  ))}
+                  {renderSpareParts(group.slice(6, 12))}
                 </Row>
               </Container>
             </SwiperSlide>

@@ -70,6 +70,12 @@
   background-color: var(--accent-color);
 }
 
+@media (min-width: 1400px) {
+  .col-md-2 {
+    width: 12rem !important;
+  }
+}
+
 @media (min-width: 768px) {
   .col-md-2 {
     width: 10rem;
