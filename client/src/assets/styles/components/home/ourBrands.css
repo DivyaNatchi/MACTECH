@@ -9,7 +9,16 @@
   height: auto;
 }
 
+.brands .swiper-slide .brand-container {
+  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+}
+
 .brands .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
   transition: 0.3s;
 }
 

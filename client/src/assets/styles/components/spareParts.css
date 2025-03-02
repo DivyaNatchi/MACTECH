@@ -28,9 +28,7 @@
 .spare-parts .card .card-body {
   height: 4rem;
   padding: 0px;
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .spare-parts .card-title p {
@@ -39,6 +37,19 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spare-parts .img-container {
+  height: 8rem;
+  overflow: hidden;
+}
+
+.spare-parts .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .spare-parts input[type="text"] {
@@ -66,6 +77,7 @@
 .spare-parts .swiper-button-prev:hover .spare-parts .swiper-button-next:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
 .spare-parts .swiper-scrollbar-drag {
   background-color: var(--accent-color);
 }

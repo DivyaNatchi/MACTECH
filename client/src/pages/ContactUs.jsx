@@ -11,6 +11,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/styles/components/contactUs.css";
 import { generateCaptcha } from "../utilities/captchaUtils";
+import { sendEmail } from "../services/emailService";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -111,7 +112,7 @@ export default function ContactSection() {
     return validationErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Perform validation before submission
@@ -121,9 +122,11 @@ export default function ContactSection() {
     if (!captchaInput.trim()) {
       validationErrors.captcha = "Captcha is required.";
     }
+    console.log("captchaInput:", captchaInput);
+    console.log("captcha:", captcha);
 
     // Check if CAPTCHA matches
-    if (captchaInput && captchaInput !== captcha) {
+    if (captchaInput && captchaInput !== captcha.replace(/\s/g, "")) {
       validationErrors.captcha = "Captcha does not match. Please try again.";
       setCaptcha(generateCaptcha()); // Regenerate captcha
       setCaptchaInput("");
@@ -136,8 +139,8 @@ export default function ContactSection() {
 
     try {
       // Call the sendEmail function to send the form data to the server
-      // const response = await sendEmail(formData);
-      // setStatus("Message sent! Thank you!");
+      const response = await sendEmail(formData);
+      console.log("Email sent response:", response);
       setShowStatus(true);
       setStatus("success");
 
@@ -295,7 +298,7 @@ export default function ContactSection() {
                 {/* CAPTCHA Section */}
 
                 <Col>
-                  <div class="input_field captch_box">
+                  <div className="input_field captch_box">
                     <input type="text" value={captcha} disabled />
                     <i
                       className="bi bi-arrow-clockwise refresh_button"

@@ -27,12 +27,14 @@ const groupSpareParts = (parts, groupSize) => {
 const renderSpareParts = (parts) => {
   return parts.map((part, index) => (
     <Col key={index} md="2" sm="4" xs="6" className="mb-3">
-      <Card>
-        <CardImg top width="100%" src={part.img} alt="Spare part image" />
+      <Card className="h-100 d-flex flex-column">
+        <div className="img-container">
+          <CardImg top src={part.img} alt="Spare part image" />
+        </div>
         <hr />
-        <CardBody>
-          <CardTitle tag="h2">
-            <p className="title">{part.title}</p>
+        <CardBody className="d-flex justify-content-center">
+          <CardTitle tag="h2" className="text-center">
+            <p className="title mb-0">{part.title}</p>
           </CardTitle>
         </CardBody>
       </Card>
@@ -58,14 +60,12 @@ export default function SparePartsSwiper({ spareParts }) {
         >
           {groupedSpareParts.map((group, groupIndex) => (
             <SwiperSlide key={groupIndex}>
-              <Container className="d-flex justify-content-center align-items-center">
-                <Row className="justify-content-center">
-                  {renderSpareParts(group.slice(0, 6))}
-                </Row>
-                <Row className="justify-content-center">
-                  {renderSpareParts(group.slice(6, 12))}
-                </Row>
-              </Container>
+              <Row className="justify-content-center">
+                {renderSpareParts(group.slice(0, 6))}
+              </Row>
+              <Row className="justify-content-center">
+                {renderSpareParts(group.slice(6, 12))}
+              </Row>
             </SwiperSlide>
           ))}
         </Swiper>

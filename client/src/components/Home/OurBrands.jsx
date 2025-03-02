@@ -75,7 +75,9 @@ export default function OurBrands() {
         >
           {brands.map((brand, index) => (
             <SwiperSlide key={index} className="swiper-slide">
-              <img src={brand.img} className="img-fluid" alt={brand.alt} />
+              <div className="brand-container">
+                <img src={brand.img} className="img-fluid" alt={brand.alt} />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
