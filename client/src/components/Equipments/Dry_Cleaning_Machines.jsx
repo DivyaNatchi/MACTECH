@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Row, Col } from "reactstrap";
 import { useSearchParams } from "react-router-dom";
-import { getWasherExtractorByBrand } from "../../data/washer_extrator_data"; // Import the function
+import { getDryCleaningMachinesByBrand } from "../../data/dry_cleaning_machines_data"; // Import the function
 import PopUpModal from "../PopUpModal";
 
-export default function Washer_Extractor() {
+export default function Dry_Cleaning_Machines() {
   const [searchParams] = useSearchParams(); // Using useSearchParams to get query param
   const brand = searchParams.get("brand"); // Get 'brand' from search params
 
   // Get filtered images using the function from imageData.js
-  const washerExtractorList = getWasherExtractorByBrand(brand);
+  const dryCleaningMachinesList = getDryCleaningMachinesByBrand(brand);
 
   // State for managing modal visibility and content
   const [modalOpen, setModalOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function Washer_Extractor() {
       <div className="equipment-content-area">
         <Row className="g-3">
           {/* g-3 adds Bootstrap grid spacing */}
-          {washerExtractorList.map((part, index) => (
+          {dryCleaningMachinesList.map((part, index) => (
             <Col lg="6" md="6" sm="12" key={index} className="equipment-col">
               <div className="washer-extractor-item position-relative">
                 <div className="img">

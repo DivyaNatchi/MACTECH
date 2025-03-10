@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Equipments from "./pages/Equipments";
 import Washer_Extractor from "./components/Equipments/Washer_Extractor";
 import Dumble_Dryer from "./components/Equipments/Dumble_Dryer";
+import Dry_Cleaning_Machines from "./components/Equipments/Dry_Cleaning_machines";
+import Garment_Finishing from "./components/Equipments/Garment_Finishing";
 import Services from "./pages/Services";
 import SpareParts from "./pages/SpareParts";
 import Accessories from "./pages/Accessories";
@@ -39,6 +41,11 @@ const App = () => {
             {/* Submenu routes for Equipments */}
             <Route path="washer_extractor" element={<Washer_Extractor />} />
             <Route path="dumble_dryer" element={<Dumble_Dryer />} />
+            <Route
+              path="dry_cleaning_machines"
+              element={<Dry_Cleaning_Machines />}
+            />
+            <Route path="garment_finishing" element={<Garment_Finishing />} />
           </Route>
           <Route path="services" element={<Services />} />
           <Route path="spareparts" element={<SpareParts />} />

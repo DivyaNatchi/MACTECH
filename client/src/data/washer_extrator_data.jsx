@@ -1,16 +1,57 @@
 // imageData.js
 const images = import.meta.glob(
-  "../assets/img/equipments/**/*.{jpg,png,jpeg}",
+  "../assets/img/equipments/waher-extractor/**/*.{jpg,png,jpeg}",
   { eager: true }
 );
 
+const shortNote = [
+  `High spin washer extractor`,
+  `Low spin washer extractor`,
+  `High spin washer extractor`,
+  `Low spin washer extractor`,
+];
+
 // Hardcoded descriptions for each image
 const descriptions = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-  "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam urna ut quam vehicula, id rutrum lorem scelerisque.",
-  "Nullam vel sapien ac lectus tristique dictum vel ac odio. Ut sed risus orci. Nulla lacinia metus vitae mauris placerat condimentum.",
-  "Aenean ac risus felis. Nulla ut ullamcorper turpis, nec auctor felis. Aliquam suscipit, erat ac lacinia ullamcorper, felis turpis tristique urna.",
-  "Sed feugiat, nisl ut auctor volutpat, libero magna suscipit nisl, a tempor urna leo vitae eros. Donec sit amet velit ut leo feugiat feugiat.",
+  `• User friendly and totally programmable 7”. • USB Connection. Online platform free of charge for  programming, telemetry, data analysis… thanks to the IoT. • 37 languages. • 8 dosing signals as standard. • High G-Factor: G-FACTOR 500 for high spin washers. • Intelligent consumption. • Optimal loading. • Water Recovery tanks ready: KRS. • Low water consumption.`,
+  `• User friendly and totally programmable 7”. • USB Connection. Online platform free of charge for  programming, telemetry, data analysis…thanks to the IoT. • 37 languages. • 8 dosing signals as standard8 dosing. • High G-Factor of 200. EFFICIENCY • Intelligent consumption. • Optimal loading. • Low water consumption.`,
+
+  `• Freestanding, high spin washer
+• Stainless steel cabinet, drum and tub
+• Patented soap hopper with 5 removable
+compartments
+• Easy access to all vital parts from the
+front
+• Large door opening for easy loading &
+unloading
+• Two large drain valves (Ø 103 mm)
+• USB plug located on the main board
+• Frequency controlled motor
+• Air operated water inlet and drain valve
+• Liquid soap connection and pumps
+• XControl FLEX PLUS – fully programmable
+and customizable cycles 7" touch screen.
+• User-friendly screen with operating
+instructions built in as part of the control
+• Complete control content available in 34
+languages
+• XControl – fully programmable control with
+20 Pre-set programs and memory up to 99.
+`,
+  `• Rigid mounted, normal spin, up to 200G
+factor
+• Stainless steel drum and tub
+• Patented soap hopper
+• Easy access to all vital parts from the
+front
+• Large door opening for easy loading &
+unloading
+• Large drain valve (Ø 76 mm)
+• Stainless steel front and side panels
+• Liquid soap connection and pumps
+• Electric steam heating version
+• XControl – fully programmable control with
+20 Pre-set programs and memory up to 99.`,
 ];
 
 // Function to get images based on brand and add description
@@ -31,6 +72,7 @@ export const getWasherExtractorByBrand = (brand) => {
       return {
         img: images[path].default,
         title: imageName,
+        shortNote: shortNote[index % shortNote.length], // Use shortNote in a cyclic manner
         description: descriptions[index % descriptions.length], // Use descriptions in a cyclic manner
       };
     })

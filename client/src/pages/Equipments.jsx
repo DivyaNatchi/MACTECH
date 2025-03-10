@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Collapse } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../assets/styles/components/equipments.css"; // Add your styles here
@@ -23,7 +23,8 @@ export default function Equipments() {
     return (
       location.pathname.includes(option) ||
       location.pathname.includes(`${option}/submenu1`) ||
-      location.pathname.includes(`${option}/submenu2`)
+      location.pathname.includes(`${option}/submenu2`) ||
+      location.pathname.includes(`${option}/submenu3`)
     );
   };
 
